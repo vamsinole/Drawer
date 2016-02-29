@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vamashikrishna.drawer">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/effe"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NextActivity" />
+        <activity android:name=".ProshowsActivity" />
+        <activity android:name=".EventActivity" />
+        <activity android:name=".MusicActivity" />
+        <activity android:name=".DanceActivity" />
+        <activity android:name=".DramaActivity" />
+        <activity android:name=".InformalActivity" />
+        <activity android:name=".FineArtsActivity" />
+        <activity android:name=".OnlineActivity" />
+        <activity android:name=".PhotoActivity" />
+        <activity android:name=".AntakshiriActivity" />
+        <activity android:name=".LiteraryActivity" />
+        <activity android:name=".RegActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".ContactActivity" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DancingActivity"
+            android:label="@string/title_activity_dancing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DramasActivity"
+            android:label="@string/title_activity_dramas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LiterateActivity"
+            android:label="@string/title_activity_literate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FineActivity"
+            android:label="@string/title_activity_fine"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OnlineOneActivity"
+            android:label="@string/title_activity_online_one"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormalActivity"
+            android:label="@string/title_activity_formal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProshowActivity"
+            android:label="@string/title_activity_proshow"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <Service android:name=".Notification" />
+
+        <BroadcastReceiver android:name=".AlarmService" />
+
+        <!-- <provider -->
+        <!-- android:authorities="com.example.vamashikrishna.drawer.android.todos.contentprovider" -->
+        <!-- android:name=".contentprovider.MyTodoContentProvider" > -->
+        <!-- </provider> -->
+
+        <service
+            android:name=".NotificationService"
+            android:exported="false" />
+
+        <activity android:name=".SigninActivity" />
+        <activity android:name=".AfterLogin"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
+    </application>
+
+</manifest>
